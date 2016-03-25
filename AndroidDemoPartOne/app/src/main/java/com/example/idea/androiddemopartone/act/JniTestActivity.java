@@ -2,26 +2,33 @@ package com.example.idea.androiddemopartone.act;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.idea.androiddemopartone.R;
-import com.example.idea.androiddemopartone.adapter.HomeListAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class JniTestActivity extends AppCompatActivity{
+public class JniTestActivity extends AppCompatActivity {
 
-    @Bind(R.id.lv_list)
-    ListView lv_list;
+    //添加静态代码块，作用是运行的时候动态调用名为“MyJni”的动态库
+    static{
+        System.loadLibrary("MyJni");
+    }
 
-    private HomeListAdapter adapter;
+    //声明一个native方法，该方法需要后续我们在.c文件中实现
+    public native String getStringFromNative();
 
-    private String[] titles={"Android studio 上的一个jniDemo"};
+    public native String getStringFromNative_second();
+
+
+    @Bind(R.id.tv_show)
+    TextView tv_show;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_home);
+        setContentView(R.layout.act_jni_test);
         ButterKnife.bind(this);
 
         initView();
@@ -29,9 +36,7 @@ public class JniTestActivity extends AppCompatActivity{
     }
 
     private void initView() {
-        adapter=new HomeListAdapter(this,titles);
-        lv_list.setAdapter(adapter);
-
+        tv_show.setText(getStringFromNative_second());
     }
 
 
