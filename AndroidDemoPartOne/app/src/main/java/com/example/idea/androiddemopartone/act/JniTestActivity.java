@@ -2,18 +2,15 @@ package com.example.idea.androiddemopartone.act;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.idea.androiddemopartone.R;
 import com.example.idea.androiddemopartone.adapter.HomeListAdapter;
-import com.example.idea.androiddemopartone.utils.ActUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class JniTestActivity extends AppCompatActivity{
 
     @Bind(R.id.lv_list)
     ListView lv_list;
@@ -35,18 +32,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter=new HomeListAdapter(this,titles);
         lv_list.setAdapter(adapter);
 
-        lv_list.setOnItemClickListener(this);
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        switch(position){
-            case 0:
-                ActUtils.toJniTestAct(this,false);
-                break;
-            default:
-                break;
-        }
 
-    }
 }
