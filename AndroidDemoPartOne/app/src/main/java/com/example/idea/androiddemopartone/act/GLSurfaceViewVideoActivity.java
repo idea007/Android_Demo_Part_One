@@ -13,14 +13,14 @@ import com.example.idea.androiddemopartone.utils.ActUtils;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class GLSurfaceViewVideoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     @Bind(R.id.lv_list)
     ListView lv_list;
 
     private HomeListAdapter adapter;
 
-    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频"};
+    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView播放本地视频"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +43,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         switch(position){
             case 0:
                 ActUtils.toJniTestAct(this,false);
-                break;
-            case 1:
-                ActUtils.toNoninteractiveAct(this,false);
-                break;
-            case 2:
-                ActUtils.toNoninteractiveAct(this,false);
                 break;
             default:
                 break;
