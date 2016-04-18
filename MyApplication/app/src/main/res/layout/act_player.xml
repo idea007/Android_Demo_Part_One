@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.idea.myapplication.MainActivity">
+
+
+    <com.example.idea.myapplication.view.MyVideoView
+        android:id="@+id/mvv_video"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/mvv_video"
+        android:layout_gravity="bottom"
+        android:background="#ba282828"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/selector_controller_play" />
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_play"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+
+        <!--  <ImageView
+              android:id="@+id/cb_full_screen"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="15dp"
+              android:button="@drawable/selector_controller_pause"
+              android:checked="false" />-->
+        <TextView
+            android:id="@+id/tv_surplus_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <SeekBar
+            android:id="@+id/sb_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/tv_surplus_time"
+            android:layout_toRightOf="@id/tv_current_time"
+            android:focusable="true"
+            android:indeterminate="false"
+            android:progress="0" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sound"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ba282828"
+        android:layout_below="@id/rl_bottom"
+        android:layout_marginTop="10dp"
+        android:clickable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="音量"/>
+
+        <SeekBar
+            android:id="@+id/sb_seekbar_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="0~15"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ba282828"
+        android:layout_below="@id/rl_sound"
+        android:layout_marginTop="10dp"
+        android:clickable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="亮度"/>
+
+        <SeekBar
+            android:id="@+id/sb_seekbar_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:text="0~255"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+

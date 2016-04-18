@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
                 ActUtils.toNoninteractiveAct(this,false);
                 break;
             case 2:
-                ActUtils.toNoninteractiveAct(this,false);
+                ActUtils.toInteractiveAct(this,false);
                 break;
             default:
                 break;
