@@ -20,7 +20,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private HomeListAdapter adapter;
 
-    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频"};
+    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频","自定义progressBar"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +49,10 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 2:
                 ActUtils.toInteractiveAct(this,false);
+                break;
+            case 4:
+                ActUtils.toProgressBarAct(this,false);
+
                 break;
             default:
                 break;

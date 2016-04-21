@@ -19,6 +19,7 @@
         <activity android:name=".act.JniTestActivity"/>
         <activity android:name=".act.NonInteractiveActivity"/>
         <activity android:name=".act.InteractiveActivity"/>
+        <activity android:name=".act.ProgressBarActivity"/>
     </application>
 
 </manifest>
