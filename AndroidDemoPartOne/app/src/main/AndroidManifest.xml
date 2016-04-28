@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.idea.androiddemopartone">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,10 +20,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".act.JniTestActivity"/>
+        <activity android:name=".act.JniTestTwoActivity"/>
         <activity android:name=".act.NonInteractiveActivity"/>
         <activity android:name=".act.InteractiveActivity"/>
         <activity android:name=".act.ProgressBarActivity"/>
+        <activity android:name=".act.SurfaceTextureActivity"/>
     </application>
 
 </manifest>

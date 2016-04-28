@@ -33,9 +33,9 @@ public class ProgressBarActivity extends AppCompatActivity{
         tdp_progress.setMax(100);
         tdp_progress.setProgress(50);
 
-        csb_volumebar.setMax(15);
+        csb_volumebar.setMax(150);
         csb_volumebar.setProgressBarColor(R.color.colorPrimary);
-        csb_volumebar.setProgress(7);
+        csb_volumebar.setProgress(149);
     }
 
 }
