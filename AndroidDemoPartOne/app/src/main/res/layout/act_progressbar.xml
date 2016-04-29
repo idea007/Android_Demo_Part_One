@@ -16,8 +16,8 @@
 
     <com.example.idea.androiddemopartone.view.ClockProgressView
         android:id="@+id/cpv_clock"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"/>
 
