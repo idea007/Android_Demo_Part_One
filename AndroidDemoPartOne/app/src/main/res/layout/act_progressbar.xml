@@ -3,12 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <SeekBar
+        android:id="@+id/sb_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_progress"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"/>
     
     <com.example.idea.androiddemopartone.view.ThreeDProgressbar
         android:id="@+id/tdp_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
+        android:visibility="gone"
         ></com.example.idea.androiddemopartone.view.ThreeDProgressbar>
 
 
@@ -16,5 +33,19 @@
         android:id="@+id/csb_volumebar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone"
         ></com.example.idea.androiddemopartone.view.CircleSeekBar>
+
+    <com.example.idea.androiddemopartone.view.SymmetrySeekBar
+        android:id="@+id/ssb_symmetry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="80dp">
+
+    </com.example.idea.androiddemopartone.view.SymmetrySeekBar>
+
+
+
+
 </RelativeLayout>
