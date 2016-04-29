@@ -63,18 +63,31 @@ public abstract class ClockProgressDrawable extends Drawable {
         float f10 = (float) Math.round(f1 * Math.cos(f4));
         float f11 = (float) Math.round(f1 * Math.sin(f4));
         this.mPath.moveTo(f9, f8);
-        this.mPath.rLineTo(f10, f11);
-        this.mPath.moveTo(f9, -f8);
-        this.mPath.rLineTo(f10, -f11);
-        this.mPath.moveTo(0.0F, 0.0F);
+//        this.mPath.rLineTo(f10, f11);
+//          this.mPath.moveTo(f9, -f8);
+//        this.mPath.rLineTo(f10, -f11);
+//        this.mPath.moveTo(0.0F, 0.0F);
         this.mPath.close();
+
+
         canvas.save();
-        if (!isLayoutRtl())
+
+        this.mPaint.setColor(context.getResources().getColor(R.color.ldrawer_color_bg));
+        canvas.drawCircle(localRect.centerX(), localRect.centerY(), localRect.centerX()*7/8, this.mPaint);
+
+        this.mPaint.setColor(context.getResources().getColor(R.color.ldrawer_color));
+
+        if (!isLayoutRtl()) {
             canvas.rotate(180.0F, localRect.centerX(), localRect.centerY());
+        }
         canvas.rotate(f7 * mVerticalMirror, localRect.centerX(), localRect.centerY());
-        canvas.translate(localRect.centerX(), localRect.centerY());
+        canvas.translate(localRect.centerX()*1.35f, localRect.centerY());
         canvas.drawPath(this.mPath, this.mPaint);
+
+
         canvas.restore();
+
+
     }
 
     public int getIntrinsicHeight() {
