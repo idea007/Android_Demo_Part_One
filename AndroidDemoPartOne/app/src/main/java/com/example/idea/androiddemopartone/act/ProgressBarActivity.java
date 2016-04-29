@@ -8,6 +8,7 @@ import android.widget.SeekBar;
 import com.example.idea.androiddemopartone.R;
 import com.example.idea.androiddemopartone.view.CircleSeekBar;
 import com.example.idea.androiddemopartone.view.ClockProgressDrawable;
+import com.example.idea.androiddemopartone.view.ClockProgressView;
 import com.example.idea.androiddemopartone.view.SymmetrySeekBar;
 import com.example.idea.androiddemopartone.view.ThreeDProgressbar;
 
@@ -27,6 +28,9 @@ public class ProgressBarActivity extends AppCompatActivity{
 
     @Bind(R.id.iv_progress)
     ImageView iv_progress;
+
+    @Bind(R.id.cpv_clock)
+    ClockProgressView cpv_clock;
 
     @Bind(R.id.sb_seekbar)
     SeekBar sb_seekbar;
@@ -49,21 +53,25 @@ public class ProgressBarActivity extends AppCompatActivity{
 
     private void initClockView() {
 
-        arrowDrawable = new ClockProgressDrawable(this) {
+//        arrowDrawable = new ClockProgressDrawable(this) {
+//
+//            @Override
+//            public boolean isLayoutRtl() {
+//                return false;
+//            }
+//        };
+//
+//        iv_progress.setImageDrawable(arrowDrawable);
 
-            @Override
-            public boolean isLayoutRtl() {
-                return false;
-            }
-        };
 
-        iv_progress.setImageDrawable(arrowDrawable);
-        sb_seekbar.setMax(100);
+        sb_seekbar.setMax(180);
         sb_seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                float value=(float)progress/100;
-                arrowDrawable.setProgress(value);
+//                float value=(float)progress/100;
+//                arrowDrawable.setProgress(value);
+
+                cpv_clock.setProgress(progress);
 
             }
 
