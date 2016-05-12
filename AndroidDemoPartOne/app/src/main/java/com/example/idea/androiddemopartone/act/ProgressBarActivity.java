@@ -11,6 +11,7 @@ import com.example.idea.androiddemopartone.view.ClockProgressDrawable;
 import com.example.idea.androiddemopartone.view.ClockProgressView;
 import com.example.idea.androiddemopartone.view.SymmetrySeekBar;
 import com.example.idea.androiddemopartone.view.ThreeDProgressbar;
+import com.example.idea.androiddemopartone.view.rangebar.RangeBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -35,6 +36,9 @@ public class ProgressBarActivity extends AppCompatActivity{
     @Bind(R.id.sb_seekbar)
     SeekBar sb_seekbar;
 
+    @Bind(R.id.rb_rangebar)
+    RangeBar rangebar;
+
     private ClockProgressDrawable arrowDrawable;
 
 
@@ -48,6 +52,40 @@ public class ProgressBarActivity extends AppCompatActivity{
 
         initClockView();
 
+        initRangeBar();
+
+
+    }
+
+    private void initRangeBar() {
+//        rangebar.setBarColor(getResources().getColor(R.color.ldrawer_color));
+        rangebar.setConnectingLineColor(getResources().getColor(R.color.ldrawer_color));
+        rangebar.setTickEnd(100);
+
+
+        rangebar.setConnectingLineWeight(3);
+        rangebar.setBarWeight(12);
+        rangebar.setBarColor(getResources().getColor(R.color.ldrawer_color));
+
+//        rangebar.setBackgroundColor(getResources().getColor(R.color.ldrawer_color));
+        rangebar.setDrawingCacheBackgroundColor(getResources().getColor(R.color.ldrawer_color));
+        rangebar.setSelectorColor(getResources().getColor(R.color.ldrawer_color));
+        rangebar.setTickColor(getResources().getColor(R.color.ldrawer_color));
+
+
+
+        rangebar.setRangePinsByIndices(0, 0);
+        rangebar.setRangeBarEnabled(!rangebar.isRangeBar());
+
+
+//        rangebar.setTickColor(getResources().getColor(R.color.ldrawer_color));
+
+
+//        rangebar.setPinColor(getResources().getColor(R.color.ldrawer_color));
+
+
+//        rangebar.setRangePinsByIndices(0, 0);
+//        rangebar.setRangeBarEnabled(false);
 
     }
 

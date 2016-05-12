@@ -25,6 +25,9 @@
         <activity android:name=".act.InteractiveActivity"/>
         <activity android:name=".act.ProgressBarActivity"/>
         <activity android:name=".act.SurfaceTextureActivity"/>
+        <activity android:name=".act.LoopViewPagerActivity"/>
+        <activity android:name=".act.CircleMenuActivity"/>
+        <activity android:name=".act.CycleScrollViewActivity"/>
     </application>
 
 </manifest>

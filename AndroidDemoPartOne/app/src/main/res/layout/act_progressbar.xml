@@ -28,6 +28,13 @@
         android:layout_below="@id/cpv_clock"
         android:layout_marginTop="10dp"
         android:padding="15dp"/>
+
+    <com.example.idea.androiddemopartone.view.rangebar.RangeBar
+        android:id="@+id/rb_rangebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/sb_seekbar"
+        android:layout_margin="15dp"/>
     
     <com.example.idea.androiddemopartone.view.ThreeDProgressbar
         android:id="@+id/tdp_progress"

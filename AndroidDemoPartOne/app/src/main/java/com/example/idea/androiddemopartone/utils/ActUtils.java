@@ -3,8 +3,11 @@ package com.example.idea.androiddemopartone.utils;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.example.idea.androiddemopartone.act.CircleMenuActivity;
+import com.example.idea.androiddemopartone.act.CycleScrollViewActivity;
 import com.example.idea.androiddemopartone.act.InteractiveActivity;
 import com.example.idea.androiddemopartone.act.JniTestTwoActivity;
+import com.example.idea.androiddemopartone.act.LoopViewPagerActivity;
 import com.example.idea.androiddemopartone.act.NonInteractiveActivity;
 import com.example.idea.androiddemopartone.act.ProgressBarActivity;
 import com.example.idea.androiddemopartone.act.SurfaceTextureActivity;
@@ -42,6 +45,27 @@ public class ActUtils {
     }
     public static void toSurfaceTextureAct(Activity act, boolean isFinish){
         act.startActivity(new Intent(act, SurfaceTextureActivity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
+    public static void toLoopViewPagerAct(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, LoopViewPagerActivity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
+    public static void toCircleMenuAct(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, CircleMenuActivity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
+    public static void toCycleScrollViewAct(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, CycleScrollViewActivity.class));
         if(isFinish){
             act.finish();
         }

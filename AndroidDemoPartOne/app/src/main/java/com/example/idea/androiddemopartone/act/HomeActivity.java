@@ -20,7 +20,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private HomeListAdapter adapter;
 
-    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频","自定义progressBar","SurfaceTexture"};
+    private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频","自定义progressBar","SurfaceTexture","LoopViewPager"
+    ,"CircleMenu","CycleScrollView"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,18 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 5:
                 ActUtils.toSurfaceTextureAct(this,false);
+
+                break;
+            case 6:
+                ActUtils.toLoopViewPagerAct(this,false);
+
+                break;
+            case 7:
+                ActUtils.toCircleMenuAct(this,false);
+
+                break;
+            case 8:
+                ActUtils.toCycleScrollViewAct(this,false);
 
                 break;
             default:
