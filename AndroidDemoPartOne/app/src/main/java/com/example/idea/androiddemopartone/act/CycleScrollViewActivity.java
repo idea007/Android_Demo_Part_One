@@ -42,9 +42,9 @@ public class CycleScrollViewActivity extends AppCompatActivity{
         mUserList.add(users1);
         mUserList.add(users2);
         mUserList.add(users3);
-        mUserList.add(users1);
-        mUserList.add(users2);
-        mUserList.add(users3);
+//        mUserList.add(users1);
+//        mUserList.add(users2);
+//        mUserList.add(users3);
 //
 //        mUserList.add(users1);
 //        mUserList.add(users2);

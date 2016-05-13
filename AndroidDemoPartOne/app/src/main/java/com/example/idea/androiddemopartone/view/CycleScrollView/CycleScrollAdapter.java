@@ -85,7 +85,7 @@ public abstract class CycleScrollAdapter<T> {
         if (list.size() >= mCycleScrollView.getMaxItemCount()) {
             mCycleScrollView.setCanScroll(true);
         } else {
-            mCycleScrollView.setCanScroll(false);
+            mCycleScrollView.setCanScroll(true);
         }
 
         /**

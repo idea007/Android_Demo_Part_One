@@ -81,7 +81,7 @@ public class CycleScrollView<T> extends ViewGroup implements OnGestureListener {
 
     private int defaultItemY = 10;
 
-    private int maxItemCount = 5;
+    private int maxItemCount = 3;
 
     private int initItemX = 20;
 
@@ -550,6 +550,7 @@ public class CycleScrollView<T> extends ViewGroup implements OnGestureListener {
     }
 
     public void setItemWidth(int itemWidth) {
+
         this.itemWidth = itemWidth;
     }
 

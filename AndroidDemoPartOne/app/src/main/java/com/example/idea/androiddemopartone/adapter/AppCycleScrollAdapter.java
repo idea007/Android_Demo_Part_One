@@ -35,9 +35,7 @@ public class AppCycleScrollAdapter extends CycleScrollAdapter<ItemInfo> {
     @Override
     public View getView(ItemInfo pi) {
         View view = View.inflate(mContext, R.layout.view_item, null);
-        // inflate APP icon view
         ImageView image = (ImageView) view.findViewById(R.id.item_image);
-        // inflate APP name view
         TextView text = (TextView) view.findViewById(R.id.item_text);
         image.setImageResource(pi.getAvatar());
         text.setText(pi.getName());
