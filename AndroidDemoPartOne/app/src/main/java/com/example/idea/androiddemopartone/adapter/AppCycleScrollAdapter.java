@@ -1,48 +1,46 @@
 package com.example.idea.androiddemopartone.adapter;
 
 import android.content.Context;
-import android.content.pm.PackageInfo;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.idea.androiddemopartone.R;
+import com.example.idea.androiddemopartone.model.ItemInfo;
 import com.example.idea.androiddemopartone.view.CycleScrollView.CycleScrollAdapter;
 import com.example.idea.androiddemopartone.view.CycleScrollView.CycleScrollView;
 
 import java.util.List;
 
-public class AppCycleScrollAdapter extends CycleScrollAdapter<PackageInfo> {
+public class AppCycleScrollAdapter extends CycleScrollAdapter<ItemInfo> {
 
-    public AppCycleScrollAdapter(List<PackageInfo> list,
-                                 CycleScrollView<PackageInfo> cycleScrollView, Context context) {
+    public AppCycleScrollAdapter(List<ItemInfo> list,
+                                 CycleScrollView<ItemInfo> cycleScrollView, Context context) {
         super(list, cycleScrollView, context);
     }
 
     @Override
-    protected void initView(List<PackageInfo> list) {
+    protected void initView(List<ItemInfo> list) {
         super.initView(list);
     }
 
     @Override
-    public void bindView(View child, PackageInfo pi) {
+    public void bindView(View child, ItemInfo pi) {
         ImageView image = (ImageView) child.findViewById(R.id.item_image);
         TextView text = (TextView) child.findViewById(R.id.item_text);
-        image.setImageDrawable(pi.applicationInfo.loadIcon(mContext
-                .getPackageManager()));
-        text.setText(pi.applicationInfo.loadLabel(mContext.getPackageManager()));
+        image.setImageResource(pi.getAvatar());
+        text.setText(pi.getName());
     }
 
     @Override
-    public View getView(PackageInfo pi) {
+    public View getView(ItemInfo pi) {
         View view = View.inflate(mContext, R.layout.view_item, null);
         // inflate APP icon view
         ImageView image = (ImageView) view.findViewById(R.id.item_image);
         // inflate APP name view
         TextView text = (TextView) view.findViewById(R.id.item_text);
-        image.setImageDrawable(pi.applicationInfo.loadIcon(mContext
-                .getPackageManager()));
-        text.setText(pi.applicationInfo.loadLabel(mContext.getPackageManager()));
+        image.setImageResource(pi.getAvatar());
+        text.setText(pi.getName());
         return view;
     }
 }
