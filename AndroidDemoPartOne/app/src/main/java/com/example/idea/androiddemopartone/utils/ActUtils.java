@@ -9,6 +9,9 @@ import com.example.idea.androiddemopartone.act.InteractiveActivity;
 import com.example.idea.androiddemopartone.act.JniTestTwoActivity;
 import com.example.idea.androiddemopartone.act.LoopViewPagerActivity;
 import com.example.idea.androiddemopartone.act.NonInteractiveActivity;
+import com.example.idea.androiddemopartone.act.OpenGlES.OpenGlESSampleListActivity;
+import com.example.idea.androiddemopartone.act.OpenGlES.Sample3_1Activity;
+import com.example.idea.androiddemopartone.act.PictureAnalysisActivity;
 import com.example.idea.androiddemopartone.act.ProgressBarActivity;
 import com.example.idea.androiddemopartone.act.SurfaceTextureActivity;
 
@@ -70,4 +73,27 @@ public class ActUtils {
             act.finish();
         }
     }
+
+    public static void toPictureAnalysisAct(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, PictureAnalysisActivity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
+    public static void toOpenGlESSampleListAct(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, OpenGlESSampleListActivity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
+
+    public static void toSample3_1Act(Activity act, boolean isFinish){
+        act.startActivity(new Intent(act, Sample3_1Activity.class));
+        if(isFinish){
+            act.finish();
+        }
+    }
+
 }

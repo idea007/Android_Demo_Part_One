@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     private HomeListAdapter adapter;
 
     private String[] titles={"Android studio 上的一个jniDemo","GlSurfaceView行为","GlSurfaceView交互行为","GlSurfaceView播放本地视频","自定义progressBar","SurfaceTexture","LoopViewPager"
-    ,"CircleMenu","CycleScrollView"};
+    ,"CircleMenu","CycleScrollView","获取图片色值","OpenGl ES2.0 3D开发案例"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +70,14 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
             case 8:
                 ActUtils.toCycleScrollViewAct(this,false);
 
+                break;
+
+            case 9:
+                ActUtils.toPictureAnalysisAct(this,false);
+
+                break;
+            case 10:
+                ActUtils.toOpenGlESSampleListAct(this,false);
                 break;
             default:
                 break;

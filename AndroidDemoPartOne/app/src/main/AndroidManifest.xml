@@ -28,6 +28,9 @@
         <activity android:name=".act.LoopViewPagerActivity"/>
         <activity android:name=".act.CircleMenuActivity"/>
         <activity android:name=".act.CycleScrollViewActivity"/>
+        <activity android:name=".act.PictureAnalysisActivity"/>
+        <activity android:name=".act.OpenGlES.OpenGlESSampleListActivity"/>
+        <activity android:name=".act.OpenGlES.Sample3_1Activity"/>
     </application>
 
 </manifest>
