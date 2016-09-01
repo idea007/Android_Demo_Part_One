@@ -4,8 +4,8 @@ package com.example.idea.androiddemopartone.model;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
 
-import com.example.idea.androiddemopartone.utils.ShaderUtil;
-import com.example.idea.androiddemopartone.view.OpenGlES.MyTDView;
+import com.example.idea.androiddemopartone.OpenGlES.glesUtils.ShaderUtil;
+import com.example.idea.androiddemopartone.OpenGlES.glesView.MyTDView;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

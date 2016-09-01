@@ -1,4 +1,4 @@
-package com.example.idea.androiddemopartone.act.OpenGlES;
+package com.example.idea.androiddemopartone.OpenGlES.glesAct;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
@@ -8,12 +8,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.idea.androiddemopartone.R;
-import com.example.idea.androiddemopartone.view.OpenGlES.MyTDView;
+import com.example.idea.androiddemopartone.OpenGlES.glesView.MyTDView;
 
 /**
  * Created by idea on 16/8/9.
  */
-public class Sample3_1Activity extends Activity {
+public class Sample3_1_Activity extends Activity {
     MyTDView mview;
     private RelativeLayout rl_container;
     @Override

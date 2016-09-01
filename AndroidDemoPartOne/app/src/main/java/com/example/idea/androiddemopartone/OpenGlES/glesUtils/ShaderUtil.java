@@ -1,4 +1,4 @@
-package com.example.idea.androiddemopartone.utils;
+package com.example.idea.androiddemopartone.OpenGlES.glesUtils;
 
 import android.content.res.Resources;
 import android.opengl.GLES20;
@@ -44,7 +44,12 @@ public class ShaderUtil
         return shader;
     }
 
-    //创建shader程序的方法
+    /**
+     * 创建shader程序的方法
+     * @param vertexSource
+     * @param fragmentSource
+     * @return
+     */
     public static int createProgram(String vertexSource, String fragmentSource)
     {
         //加载顶点着色器

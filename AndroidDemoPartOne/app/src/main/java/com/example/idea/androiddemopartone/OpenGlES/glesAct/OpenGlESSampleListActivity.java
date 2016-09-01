@@ -1,4 +1,4 @@
-package com.example.idea.androiddemopartone.act.OpenGlES;
+package com.example.idea.androiddemopartone.OpenGlES.glesAct;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +22,7 @@ public class OpenGlESSampleListActivity extends AppCompatActivity implements Ada
 
     private HomeListAdapter adapter;
 
-    private String[] titles={"Sample3_1"};
+    private String[] titles={"Sample3_1","Sample5_1"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +46,10 @@ public class OpenGlESSampleListActivity extends AppCompatActivity implements Ada
             case 0:
                 ActUtils.toSample3_1Act(this,false);
                 break;
+            case 1:
+                ActUtils.toSample5_1Act(this,false);
+                break;
+
             default:
                 break;
         }

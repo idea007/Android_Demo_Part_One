@@ -1,4 +1,4 @@
-package com.example.idea.androiddemopartone.view.OpenGlES;
+package com.example.idea.androiddemopartone.OpenGlES.glesView;
 
 import android.content.Context;
 import android.opengl.GLES20;
