@@ -46,7 +46,7 @@ public class MySurfaceView extends GLSurfaceView {
     }
 
     private class SceneRenderer implements GLSurfaceView.Renderer {
-        SixPointedStar[] ha = new SixPointedStar[3];//六角星数组
+        SixPointedStar[] ha = new SixPointedStar[6];//六角星数组
 
         public void onDrawFrame(GL10 gl) {
             //清除深度缓冲与颜色缓冲
@@ -63,14 +63,18 @@ public class MySurfaceView extends GLSurfaceView {
             //计算GLSurfaceView的宽高比
             float ratio = (float) width / height;
             //设置平行投影
-            MatrixState.setProjectOrtho(-ratio, ratio, -1, 1, 1, 10);
-
+//            MatrixState.setProjectOrtho(-ratio, ratio, -1, 1, 1, 10);
             //调用此方法产生摄像机9参数位置矩阵
-            MatrixState.setCamera(
-                    0, 0, 3f,
-                    0, 0, 0f,
-                    0f, 1.0f, 0.0f
-            ); // ????
+//            MatrixState.setCamera(
+//                    0, 0, 3f,
+//                    0, 0, 0f,
+//                    0f, 1.0f, 0.0f
+//            ); // ????
+
+            MatrixState.setProjectFrustum(-ratio * 0.4f, ratio * 0.4f, -1 * 0.4f, 1 * 0.4f, 1, 50);
+
+            MatrixState.setCamera(0, 0, 6, 0f, 0f, 0f, 1.0f, 0.0f, 0.0f);
+
         }
 
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
@@ -78,7 +82,8 @@ public class MySurfaceView extends GLSurfaceView {
             GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
             //创建六角星数组中的各个对象
             for (int i = 0; i < ha.length; i++) {
-                ha[i] = new SixPointedStar(MySurfaceView.this, 0.2f, 0.5f, -0.3f * i);
+//                ha[i] = new SixPointedStar(MySurfaceView.this, 0.2f, 0.3f, -0.3f * i);
+                ha[i] = new SixPointedStar(MySurfaceView.this, 0.4f, 1.0f,-1.0f * i);
             }
             //打开深度检测
             GLES20.glEnable(GLES20.GL_DEPTH_TEST);

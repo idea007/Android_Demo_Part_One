@@ -126,15 +126,15 @@ public class SixPointedStar {
         float[] colorArray = new float[vCount*4];
         for(int i=0;i<vCount;i++){
             if(i%3==0){ //中心点为白色
-                colorArray[i*4]=1;
-                colorArray[i*4+1]=1;
-                colorArray[i*4+2]=1;
+                colorArray[i*4]=217/255f;
+                colorArray[i*4+1]=32/255f;
+                colorArray[i*4+2]=8/255f;
                 colorArray[i*4+3]=0;
 
             }else{ //边上的点为淡蓝色
-                colorArray[i*4]=0.45f;
-                colorArray[i*4+1]=0.75f;
-                colorArray[i*4+2]=0.75f;
+                colorArray[i*4]=155/255f;
+                colorArray[i*4+1]=65/255f;
+                colorArray[i*4+2]=158/255f;
                 colorArray[i*4+3]=0;
             }
         }

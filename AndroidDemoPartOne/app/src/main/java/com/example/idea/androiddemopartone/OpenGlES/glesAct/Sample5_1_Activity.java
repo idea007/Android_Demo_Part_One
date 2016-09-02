@@ -6,18 +6,22 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
 import com.example.idea.androiddemopartone.OpenGlES.glesView.MySurfaceView;
 import com.example.idea.androiddemopartone.R;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by idea on 16/8/9.
  */
 public class Sample5_1_Activity extends Activity {
-    @Bind(R.id.msv)
-    MySurfaceView mGLSurfaceView;
+    @Bind(R.id.rl_container)
+    RelativeLayout rl_container;
+//    @Bind(R.id.msv)
+   private  MySurfaceView mGLSurfaceView;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -32,13 +36,14 @@ public class Sample5_1_Activity extends Activity {
 
         //初始化GLSurfaceView
         mGLSurfaceView = new MySurfaceView(this);
+//
+//        //切换到主界面
+//        setContentView(mGLSurfaceView);
+//
 
-        //切换到主界面
-        setContentView(mGLSurfaceView);
-
-
-//        setContentView(R.layout.act_sample_5_1);
-//        ButterKnife.bind(this);
+        setContentView(R.layout.act_sample_5_1);
+        ButterKnife.bind(this);
+        rl_container.addView(mGLSurfaceView);
         mGLSurfaceView.requestFocus();
         mGLSurfaceView.setFocusableInTouchMode(true);//设置为可触控
 

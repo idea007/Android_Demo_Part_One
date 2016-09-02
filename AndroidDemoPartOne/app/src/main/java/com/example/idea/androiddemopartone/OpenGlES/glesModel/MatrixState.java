@@ -55,6 +55,28 @@ public class MatrixState {
         Matrix.orthoM(mProjMatrix, 0, left, right, bottom, top, near, far);   //????
     }
 
+    /**
+     * 设置透视投影
+     * @param left
+     * @param right
+     * @param bottom
+     * @param top
+     * @param near
+     * @param far
+     */
+    public static void setProjectFrustum(
+            float left,		//near面的left
+            float right,    //near面的right
+            float bottom,   //near面的bottom
+            float top,      //near面的top
+            float near,		//near面距离
+            float far       //far面距离
+    )
+    {
+        Matrix.frustumM(mProjMatrix, 0, left, right, bottom, top, near, far);   //????
+    }
+
+
     //获取具体物体的总变换矩阵
     public static float[] getFinalMatrix(float[] spec)
     {
